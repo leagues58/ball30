@@ -6,5 +6,9 @@
 
 <script src="/socket.io/socket.io.js"></script>
 <script>
-  var socket = io();
+  var socket = io('//localhost:3000');
+  socket.on('socketToMe', function (data) {
+      console.log(data);
+      console.log('should said something');
+    });
 </script>
